@@ -56,6 +56,7 @@
 		E6DBDBE42B7C053900E1CCF5 /* AppAboutMe */ = {
 			isa = PBXGroup;
 			children = (
+				E6DBDBFD2B7C36B600E1CCF5 /* Models */,
 				E6DBDBEE2B7C053A00E1CCF5 /* Assets.xcassets */,
 				E6DBDBFC2B7C08CA00E1CCF5 /* ViewControllers */,
 				E6DBDBFB2B7C089D00E1CCF5 /* Storyboards */,
@@ -89,6 +90,13 @@
 				E6DBDBE92B7C053900E1CCF5 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E6DBDBFD2B7C36B600E1CCF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
