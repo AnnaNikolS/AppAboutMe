@@ -22,6 +22,9 @@ final class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        forgotNameButton.tintColor = .myRed
+        forgotPasswordButton.tintColor = .myRed
+        
         userNameTextField.text = userInfo.userName
         passwordTextField.text = userInfo.password
         
