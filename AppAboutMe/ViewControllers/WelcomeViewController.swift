@@ -7,15 +7,12 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UIStackView!
     @IBOutlet weak var fullNameLabel: UIStackView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     
     }
 }

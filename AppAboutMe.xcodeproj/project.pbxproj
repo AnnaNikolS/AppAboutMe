@@ -16,6 +16,8 @@
 		E6DBDBFF2B7C37F700E1CCF5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDBFE2B7C37F700E1CCF5 /* WelcomeViewController.swift */; };
 		E6DBDC012B7C385C00E1CCF5 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDC002B7C385C00E1CCF5 /* AboutMeViewController.swift */; };
 		E6DBDC032B7C387200E1CCF5 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDC022B7C387200E1CCF5 /* BioViewController.swift */; };
+		E6DBDC052B7C509C00E1CCF5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDC042B7C509C00E1CCF5 /* User.swift */; };
+		E6DBDC092B7C59C600E1CCF5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDC082B7C59C600E1CCF5 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E6DBDBFE2B7C37F700E1CCF5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E6DBDC002B7C385C00E1CCF5 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		E6DBDC022B7C387200E1CCF5 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		E6DBDC042B7C509C00E1CCF5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E6DBDC082B7C59C600E1CCF5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				E6DBDBFE2B7C37F700E1CCF5 /* WelcomeViewController.swift */,
 				E6DBDC002B7C385C00E1CCF5 /* AboutMeViewController.swift */,
 				E6DBDC022B7C387200E1CCF5 /* BioViewController.swift */,
+				E6DBDC082B7C59C600E1CCF5 /* TabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 		E6DBDBFD2B7C36B600E1CCF5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E6DBDC042B7C509C00E1CCF5 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,11 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6DBDBEA2B7C053900E1CCF5 /* LogInViewController.swift in Sources */,
+				E6DBDC092B7C59C600E1CCF5 /* TabBarController.swift in Sources */,
 				E6DBDC012B7C385C00E1CCF5 /* AboutMeViewController.swift in Sources */,
 				E6DBDBFF2B7C37F700E1CCF5 /* WelcomeViewController.swift in Sources */,
 				E6DBDBE62B7C053900E1CCF5 /* AppDelegate.swift in Sources */,
 				E6DBDBE82B7C053900E1CCF5 /* SceneDelegate.swift in Sources */,
 				E6DBDC032B7C387200E1CCF5 /* BioViewController.swift in Sources */,
+				E6DBDC052B7C509C00E1CCF5 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

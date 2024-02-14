@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -15,8 +15,13 @@ class LogInViewController: UIViewController {
     
     let gradientLogInView = CAGradientLayer()
     
+    private let userInfo = User.userInfo()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameTextField.text = userInfo.userName
+        passwordTextField.text = userInfo.password
+        
         logInButton.layer.cornerRadius = 5
         
         gradientLogInView.frame = view.bounds
@@ -30,12 +35,19 @@ class LogInViewController: UIViewController {
         passwordTextField.textColor = .black
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         
-       
         
     }
 
     @IBAction func pressedLogInButton() {
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tabBarController = segue.destination as? TabBarController {
+            tabBarController.user = userInfo
+        } else {
+            return
+        }
+    }
 }
+
 
