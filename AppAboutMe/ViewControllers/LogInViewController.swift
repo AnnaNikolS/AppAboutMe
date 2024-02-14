@@ -14,10 +14,8 @@ final class LogInViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var forgotNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
-    
-    let gradientLogInView = CAGradientLayer()
 
-    private let userInfo = User.userInfo()
+    var userInfo = User.userInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +28,27 @@ final class LogInViewController: UIViewController {
         logInButton.layer.cornerRadius = 5
         logInButton.backgroundColor = .myRed
         
-        gradientLogInView.frame = view.bounds
-        gradientLogInView.colors = [UIColor.myRed.cgColor, UIColor.myYellow.cgColor]
-        gradientLogInView.locations = [0.0, 1.0]
-        view.layer.insertSublayer(gradientLogInView, at: 0)
-        
-        userNameTextField.textColor = .black
-        userNameTextField.attributedPlaceholder = NSAttributedString(string: "User Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        
-        passwordTextField.textColor = .black
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        appearanceOfTF()
+        view.gradientLogInVC()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabBarController = segue.destination as? TabBarController {
-            tabBarController.user = userInfo
+            tabBarController.userInfo = userInfo
+//            tabBarController.viewControllers?.forEach { viewController in
+//                        if let welcomeVC = viewController as? WelcomeViewController {
+//                            welcomeVC.name = userInfo.userName
+//                        }
+//                    }
+//         
         } else {
             return
         }
+//        tabBarController?.viewControllers?.forEach { viewController in
+//            if let welcomeVC = viewController as? WelcomeViewController {
+//                welcomeVC.user = userInfo
+//            }
+//        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -78,6 +79,16 @@ final class LogInViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+    private func appearanceOfTF() {
+        userNameTextField.textColor = .black
+        userNameTextField.attributedPlaceholder = NSAttributedString(string: "User Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        
+        passwordTextField.textColor = .black
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    }
 }
+
+
 
 
