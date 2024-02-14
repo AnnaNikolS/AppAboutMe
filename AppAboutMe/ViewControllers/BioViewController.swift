@@ -11,12 +11,12 @@ class BioViewController: UIViewController {
     
     @IBOutlet weak var bioLabel: UILabel!
     
-    var user: User!
+    var userInfo: User!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addGradient()
+        view.addGradientOthersVC()
     }
 
 }

@@ -14,16 +14,18 @@ final class WelcomeViewController: UIViewController {
     
     let gradientWelcomeView = CAGradientLayer()
     
-    var user: User!
+    var name = ""
+    
+    var userInfo: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
        
-       //welcomeLabel.text = "\(user.userName)"
+        welcomeLabel.text = "\(userInfo.userName)"
 //        myNameLabel.text = "My name is \(user.person.surname)"
         
-        view.addGradient()
+        view.addGradientOthersVC()
        
     }
 }

@@ -7,32 +7,35 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
     
-    var user: User!
+    var userInfo: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //dataTransferToVC()
         
+        guard let viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeViewController = viewController as? WelcomeViewController {
+                welcomeViewController.userInfo = userInfo
+                
+                //                    } else if let navigationViewController = viewController as? UINavigationController {
+                //                        let aboutUserVC = navigationViewController.topViewController
+                //                        guard let aboutUserViewController = aboutUserVC as? AboutMeViewController else { return }
+                //
+                //                        aboutUserViewController.user = user
+                //
+                //                    }
+                //
+            } else {
+                return
+            }
+            
+            
+        }
     }
-    
-//    private func dataTransferToVC() {
-//        guard let viewControllers else { return }
-//        
-//        viewControllers.forEach { viewController in
-//            if let welcomeViewController = viewController as? WelcomeViewController {
-//                welcomeViewController.user = user
-//            } else if let navigationViewController = viewController as? UINavigationController {
-//                let aboutUserVC = navigationViewController.topViewController
-//                guard let aboutUserViewController = aboutUserVC as? AboutMeViewController else { return }
-//                
-//                aboutUserViewController.user = user
-//                
-//            }
-//        }
-//    }
 }
 
 

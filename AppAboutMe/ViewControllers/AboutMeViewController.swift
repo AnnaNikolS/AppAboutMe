@@ -13,10 +13,10 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var postLabel: UILabel!
     
-    var user: User!
+    var userInfo: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addGradient()
+        view.addGradientOthersVC()
     }
 }
