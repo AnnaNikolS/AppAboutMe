@@ -12,6 +12,8 @@ final class LogInViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var forgotNameButton: UIButton!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
     
     let gradientLogInView = CAGradientLayer()
    
@@ -24,10 +26,11 @@ final class LogInViewController: UIViewController {
         passwordTextField.text = userInfo.password
         
         logInButton.layer.cornerRadius = 5
+        logInButton.backgroundColor = .myRed
         
         gradientLogInView.frame = view.bounds
-        gradientLogInView.colors = [UIColor.systemBlue.cgColor, UIColor.systemMint.cgColor, UIColor.systemIndigo.cgColor]
-        gradientLogInView.locations = [0.0, 0.5, 1.0]
+        gradientLogInView.colors = [UIColor.myRed.cgColor, UIColor.myYellow.cgColor]
+        gradientLogInView.locations = [0.0, 1.0]
         view.layer.insertSublayer(gradientLogInView, at: 0)
         
         userNameTextField.textColor = .black
