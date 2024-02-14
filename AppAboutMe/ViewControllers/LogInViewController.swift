@@ -14,7 +14,7 @@ final class LogInViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var forgotNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
-
+    
     var userInfo = User.userInfo()
     
     override func viewDidLoad() {
@@ -35,20 +35,7 @@ final class LogInViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabBarController = segue.destination as? TabBarController {
             tabBarController.userInfo = userInfo
-//            tabBarController.viewControllers?.forEach { viewController in
-//                        if let welcomeVC = viewController as? WelcomeViewController {
-//                            welcomeVC.name = userInfo.userName
-//                        }
-//                    }
-//         
-        } else {
-            return
-        }
-//        tabBarController?.viewControllers?.forEach { viewController in
-//            if let welcomeVC = viewController as? WelcomeViewController {
-//                welcomeVC.user = userInfo
-//            }
-//        }
+        } else { return }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -87,6 +74,7 @@ final class LogInViewController: UIViewController {
         passwordTextField.textColor = .black
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)

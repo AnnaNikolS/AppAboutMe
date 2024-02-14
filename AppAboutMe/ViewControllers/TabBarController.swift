@@ -22,7 +22,6 @@ final class TabBarController: UITabBarController {
                 let aboutUserVC = navigationViewController.topViewController
                 guard let aboutUserViewController = aboutUserVC as? AboutMeViewController else { return }
                 aboutUserViewController.userInfo = userInfo
-                
             }
         }
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutMeViewController: UIViewController {
+final class AboutMeViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
@@ -15,7 +15,7 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     
     var userInfo: User!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         image.layer.cornerRadius = image.frame.width / 2
@@ -30,8 +30,6 @@ class AboutMeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let bioViewController = segue.destination as? BioViewController {
             bioViewController.userInfo = userInfo
-        } else {
-            return
-        }
+        } else {  return }
     }
 }
