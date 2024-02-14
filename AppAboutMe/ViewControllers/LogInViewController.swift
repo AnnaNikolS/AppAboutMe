@@ -8,12 +8,18 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
+    
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var logInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func pressedLogInButton() {
+    }
+    
 }
 

@@ -41,6 +41,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log in"/>
                                                 <connections>
+                                                    <action selector="pressedLogInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ln7-gS-6tL"/>
                                                     <segue destination="Fck-1C-rZC" kind="presentation" modalPresentationStyle="fullScreen" id="zpG-bo-OQ1"/>
                                                 </connections>
                                             </button>
@@ -74,6 +75,11 @@
                             <constraint firstItem="2n8-cZ-xqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="hVX-m1-cbo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logInButton" destination="9a4-cx-xvg" id="x30-eF-DPr"/>
+                        <outlet property="passwordTextField" destination="jPZ-lI-MIM" id="42b-8T-QTZ"/>
+                        <outlet property="userNameTextField" destination="2Na-eT-p6Y" id="TEp-LS-9AB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +88,7 @@
         <!--Home-->
         <scene sceneID="ixL-yN-Za7">
             <objects>
-                <viewController id="wL8-lV-8Dd" sceneMemberID="viewController">
+                <viewController id="wL8-lV-8Dd" customClass="WelcomeViewController" customModule="AppAboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TDa-Vp-R8Q">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +137,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="pnu-Rp-Yo7"/>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="Dhr-C0-yDd" id="hf2-jF-aW1"/>
+                        <outlet property="welcomeLabel" destination="Dhr-C0-yDd" id="4Tv-Uu-bMI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L82-Ou-iE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +149,7 @@
         <!--Anna Sosnitskaya-->
         <scene sceneID="QDH-c4-Rj3">
             <objects>
-                <viewController id="NVM-Vu-fBS" sceneMemberID="viewController">
+                <viewController id="NVM-Vu-fBS" customClass="AboutMeViewController" customModule="AppAboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iLz-fp-cuh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,6 +235,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameLabel" destination="NHU-wq-W3S" id="2x8-Cp-97d"/>
+                        <outlet property="postLabel" destination="nzt-89-UC6" id="BDx-pv-Gov"/>
+                        <outlet property="surnameLabel" destination="e9M-NZ-nRv" id="rHP-6Q-4Eb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cK5-pP-z6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,7 +248,7 @@
         <!--Anna Sosnitskaya Bio-->
         <scene sceneID="D4i-m7-7bF">
             <objects>
-                <viewController id="Q3a-dA-WqY" sceneMemberID="viewController">
+                <viewController id="Q3a-dA-WqY" customClass="BioViewController" customModule="AppAboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m3z-DE-9f1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,6 +269,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Anna Sosnitskaya Bio" id="1ax-s1-0wJ"/>
+                    <connections>
+                        <outlet property="bioLabel" destination="YeA-Z8-6Z0" id="gJc-aT-Bq8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wI3-b9-Xtf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
