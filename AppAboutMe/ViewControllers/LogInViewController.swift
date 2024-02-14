@@ -14,6 +14,7 @@ final class LogInViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     
     let gradientLogInView = CAGradientLayer()
+   
     
     private let userInfo = User.userInfo()
     
@@ -38,8 +39,6 @@ final class LogInViewController: UIViewController {
         
     }
 
-    @IBAction func pressedLogInButton() {
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabBarController = segue.destination as? TabBarController {

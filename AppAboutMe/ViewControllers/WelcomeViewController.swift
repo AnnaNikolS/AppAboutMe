@@ -12,7 +12,11 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UIStackView!
     @IBOutlet weak var fullNameLabel: UIStackView!
     
+    let gradientWelcomeView = CAGradientLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addGradient()
+       
     }
 }
