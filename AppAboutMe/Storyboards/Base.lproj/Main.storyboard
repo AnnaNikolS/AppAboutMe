@@ -41,7 +41,6 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log in"/>
                                                 <connections>
-                                                    <action selector="pressedLogInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ln7-gS-6tL"/>
                                                     <segue destination="Fck-1C-rZC" kind="presentation" modalPresentationStyle="fullScreen" id="zpG-bo-OQ1"/>
                                                 </connections>
                                             </button>
