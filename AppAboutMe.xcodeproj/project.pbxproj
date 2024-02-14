@@ -18,6 +18,7 @@
 		E6DBDC032B7C387200E1CCF5 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDC022B7C387200E1CCF5 /* BioViewController.swift */; };
 		E6DBDC052B7C509C00E1CCF5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDC042B7C509C00E1CCF5 /* User.swift */; };
 		E6DBDC092B7C59C600E1CCF5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDC082B7C59C600E1CCF5 /* TabBarController.swift */; };
+		E6DBDC0E2B7CFB0700E1CCF5 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBDC0D2B7CFB0700E1CCF5 /* Gradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E6DBDC022B7C387200E1CCF5 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		E6DBDC042B7C509C00E1CCF5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E6DBDC082B7C59C600E1CCF5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E6DBDC0D2B7CFB0700E1CCF5 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				E6DBDBFC2B7C08CA00E1CCF5 /* ViewControllers */,
 				E6DBDBFB2B7C089D00E1CCF5 /* Storyboards */,
 				E6DBDBF92B7C07E200E1CCF5 /* App */,
+				E6DBDC0F2B7CFBD700E1CCF5 /* Extensions */,
 			);
 			path = AppAboutMe;
 			sourceTree = "<group>";
@@ -112,6 +115,14 @@
 				E6DBDC042B7C509C00E1CCF5 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E6DBDC0F2B7CFBD700E1CCF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6DBDC0D2B7CFB0700E1CCF5 /* Gradient.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6DBDBEA2B7C053900E1CCF5 /* LogInViewController.swift in Sources */,
+				E6DBDC0E2B7CFB0700E1CCF5 /* Gradient.swift in Sources */,
 				E6DBDC092B7C59C600E1CCF5 /* TabBarController.swift in Sources */,
 				E6DBDC012B7C385C00E1CCF5 /* AboutMeViewController.swift in Sources */,
 				E6DBDBFF2B7C37F700E1CCF5 /* WelcomeViewController.swift in Sources */,
