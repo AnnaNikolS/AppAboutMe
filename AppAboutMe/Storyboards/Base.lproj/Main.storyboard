@@ -41,7 +41,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log in"/>
                                                 <connections>
-                                                    <segue destination="Fck-1C-rZC" kind="presentation" modalPresentationStyle="fullScreen" id="zpG-bo-OQ1"/>
+                                                    <segue destination="Fck-1C-rZC" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="zpG-bo-OQ1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -54,12 +54,18 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Forgot User Name?"/>
+                                                <connections>
+                                                    <action selector="pressedForgotNameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2IF-WX-Ajw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmN-9C-nLS">
                                                 <rect key="frame" x="156.66666666666663" y="0.0" width="156.33333333333337" height="28"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Forgot Password?"/>
+                                                <connections>
+                                                    <action selector="pressedForgotPasswordButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="XVC-Vj-o9h"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -100,6 +106,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="VMn-Kf-d1Z" kind="unwind" unwindAction="unwindFor:" id="DVL-CE-CLE"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dhr-C0-yDd">
                                 <rect key="frame" x="16" y="187.66666666666666" width="361" height="79.999999999999972"/>
@@ -144,6 +153,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L82-Ou-iE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="VMn-Kf-d1Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="461.83206106870227" y="771.83098591549299"/>
         </scene>

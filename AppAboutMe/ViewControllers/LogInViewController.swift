@@ -16,8 +16,7 @@ final class LogInViewController: UIViewController {
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
     let gradientLogInView = CAGradientLayer()
-   
-    
+
     private let userInfo = User.userInfo()
     
     override func viewDidLoad() {
@@ -41,10 +40,7 @@ final class LogInViewController: UIViewController {
         
         passwordTextField.textColor = .black
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        
-        
     }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabBarController = segue.destination as? TabBarController {
@@ -52,6 +48,35 @@ final class LogInViewController: UIViewController {
         } else {
             return
         }
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    @IBAction func pressedForgotPasswordButton() {
+        showAlert(title: "Oops!", message: "Your password is \(userInfo.password) 😉")
+    }
+    
+    @IBAction func pressedForgotNameButton() {
+        showAlert(title: "Oops!", message: "Your name is \(userInfo.userName) 😉")
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (userNameTextField.text == userInfo.userName) && (passwordTextField.text == userInfo.password) {
+            return true
+        } else {
+            showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
+        }
+        return false
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 

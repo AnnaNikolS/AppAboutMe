@@ -13,7 +13,7 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var postLabel: UILabel!
     
-    
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()

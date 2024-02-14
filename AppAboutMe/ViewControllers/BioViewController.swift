@@ -11,6 +11,8 @@ class BioViewController: UIViewController {
     
     @IBOutlet weak var bioLabel: UILabel!
     
+    var user: User!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
