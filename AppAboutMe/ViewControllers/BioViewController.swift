@@ -15,6 +15,7 @@ final class BioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "\(userInfo.person.name) \(userInfo.person.surname) Bio"
         bioLabel.text = userInfo.person.bio
         view.addGradientOthersVC()
     }

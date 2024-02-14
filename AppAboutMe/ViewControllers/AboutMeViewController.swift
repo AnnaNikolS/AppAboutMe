@@ -18,6 +18,9 @@ final class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "\(userInfo.person.name) \(userInfo.person.surname)"
+        
+        image.image = UIImage(named: userInfo.person.photo)
         image.layer.cornerRadius = image.frame.width / 2
         
         nameLabel.text = userInfo.person.name
